@@ -4,14 +4,11 @@ import java.util.EmptyStackException;
 
 public class Handler implements InvocationHandler {
 
-    private final IPolinom object;
-    private Object Exception;
-
-    public Handler(IPolinom object){
-        this.object = object;
+    public Handler(){
+        throw new UnsupportedOperationException();
     }
 
-    public Object invoke(Object proxy, Method method, Object [] args) throws IllegalArgumentException, InvocationTargetException, IllegalAccessException {
+    public Object invoke(Object proxy, Method method, Object [] args) throws Exception {
         if(!method.getName().equals("setArray")){
             return method.invoke(proxy,args);
         } else{

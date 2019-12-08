@@ -58,7 +58,7 @@ public class LinkedQueue<T> implements Queue<T> {
         // Уменьшаем размер очереди
         size--;
         // Возвращаем значение
-        return (T) element;
+        return element;
     }
 
     /**

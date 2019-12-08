@@ -11,6 +11,9 @@ public class CrazyLambdas {
      *
      * @return a string supplier
      */
+    private CrazyLambdas(){
+    }
+
     public static Supplier<String> helloSupplier() {
         return () -> "Hello";
     }

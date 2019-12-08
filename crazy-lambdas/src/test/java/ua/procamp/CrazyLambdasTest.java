@@ -151,8 +151,6 @@ public class CrazyLambdasTest {
         Queue<Integer> concurrentLinkedQueue = new ConcurrentLinkedQueue<>();
         newThreadRunnableConsumer.accept(() -> concurrentLinkedQueue.add(50));
 
-        Thread.sleep(500); // don't do that in real code
-
         assertEquals(1, concurrentLinkedQueue.size());
         assertEquals(50, concurrentLinkedQueue.element().intValue());
     }

@@ -32,39 +32,39 @@ public class RationalStatement extends Polinom{
         if(nArray==1){
             if(array.length>n && n>=0)
                 array[n] = data;
-        } else if(nArray==2){
-            if(array2.length>n && n>=0)
+        } else if(nArray==2 && array2.length>n && n>=0 ){
                 array2[n] = data;
         }
     }
 
 
     public String toString(int nArray){
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if(nArray==1){
         for(int i=0; i<array.length; i++){
-            result = result + new Integer(array[i]).toString()+ "x^"+ new Integer(array.length-1-i).toString();
+            result.append(Integer.toString(array[i])).append("x^").append(Integer.toString(array.length - 1 - i));
         }
-        return result;}
+        return result.toString();}
         else{
             for(int i=0; i<array2.length; i++){
-                result = result + new Integer(array2[i]).toString()+ "x^"+ new Integer(array2.length-1-i).toString();
+                result.append(Integer.toString(array2[i])).append("x^").append(Integer.toString(array2.length - 1 - i));
             }
-            return result;
+            return result.toString();
         }
     }
 
     @MyAnnotation
+    @Override
     public String toString(){
 
         String result = "";
 
         for(int i=0; i<array.length; i++){
-                result = result + new Integer(array[i]).toString()+ "x^"+ new Integer(array.length-1-i).toString();
+                result = new StringBuilder().append(result).append(Integer.toString(array[i])).append("x^").append(Integer.toString(array.length - 1 - i)).toString();
             }
         result = result + " / ";
         for(int i=0; i<array2.length; i++){
-            result = result + new Integer(array2[i]).toString()+ "x^"+ new Integer(array2.length-1-i).toString();
+            result = new StringBuilder().append(result).append(Integer.toString(array2[i])).append("x^").append(Integer.toString(array2.length - 1 - i)).toString();
         }
 
         return result;

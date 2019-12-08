@@ -17,22 +17,25 @@ public class FileReaders {
      * @param fileName a name of a text file
      * @return string that holds whole file content
      */
-    public static String readWholeFile(String fileName) {
+    private FileReaders(){
+
+    }
+    public static String readWholeFile(String fileName) throws FileReaderExp {
         Path filePath = createPathFromFileName(fileName);
         try {
             return Files.lines(filePath)
                     .collect(Collectors.joining("\n"));
         } catch (IOException e) {
-            throw new RuntimeException();
+            throw new FileReaderExp("New exception", new RuntimeException());
         }
     }
 
-    private static Path createPathFromFileName(String fileName) {
+    private static Path createPathFromFileName(String fileName) throws FileReaderExp {
         URL fileUrl = FileReaders.class.getClassLoader().getResource(fileName);
         try {
             return Paths.get(fileUrl.toURI());
         } catch (URISyntaxException e) {
-            throw new RuntimeException();
+            throw new FileReaderExp("New exception", new RuntimeException());
         }
     }
 }

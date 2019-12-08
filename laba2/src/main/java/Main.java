@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Polinom polinom = new Polinom();
-        Handler handler = new Handler(polinom);
+        Handler handler = new Handler();
 
         IPolinom p = (IPolinom) Proxy.newProxyInstance(IPolinom.class.getClassLoader()
                 ,new Class[]{IPolinom.class},handler);

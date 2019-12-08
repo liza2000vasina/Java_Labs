@@ -1,3 +1,5 @@
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Polinom implements IPolinom {
     protected int[] array;
@@ -14,7 +16,7 @@ public class Polinom implements IPolinom {
 
     public int getArray(int n){
         if(array.length>n && n>=0)
-            System.out.println("Getter");
+            Logger.getAnonymousLogger().log(Level.FINE,"Getter");
             return array[n];
     }
 
@@ -26,7 +28,7 @@ public class Polinom implements IPolinom {
     public String toString(){
         String result = "";
         for(int i=0; i<array.length; i++){
-            result = result + new Integer(array[i]).toString()+ "x^"+ new Integer(array.length-1-i).toString();
+            result = new StringBuilder().append(result).append(Integer.toString(array[i])).append("x^").append(Integer.toString(array.length - 1 - i)).toString();
         }
         return result;
     }
