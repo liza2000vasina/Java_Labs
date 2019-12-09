@@ -26,7 +26,7 @@ public class FileReaders {
             return Files.lines(filePath)
                     .collect(Collectors.joining("\n"));
         } catch (IOException e) {
-            throw new FileReaderExp("New exception", new RuntimeException());
+            throw new FileReaderExp("New  popo exception", new RuntimeException());
         }
     }
 
