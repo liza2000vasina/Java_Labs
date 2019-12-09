@@ -35,7 +35,7 @@ public class FileReaders {
         try {
             return Paths.get(fileUrl.toURI());
         } catch (URISyntaxException e) {
-            throw new FileReaderExp("New exception", new RuntimeException());
+            throw new FileReaderExp("New popo exception", new RuntimeException());
         }
     }
 }
