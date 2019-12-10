@@ -11,7 +11,7 @@ public class Main {
 <<<<<<< HEAD
         Logger.getAnonymousLogger().log(Level.FINE, (Supplier<double>) questions.arrayLists);
 =======
-        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<int>) questions.arrayLists);
+        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<int>) quest`ions.arrayLists);
 >>>>>>> task1
 
 
