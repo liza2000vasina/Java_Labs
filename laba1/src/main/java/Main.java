@@ -6,10 +6,9 @@ import java.util.logging.Logger;
 public class Main {
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        int task1 =2;
         Questions questions = new Questions();
         questions.init();
-        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<String>) questions.arrayLists);
+        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<int>) questions.arrayLists);
 
 
     }
