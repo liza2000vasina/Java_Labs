@@ -9,7 +9,7 @@ public class Main {
         int task1 =2;
         Questions questions = new Questions();
         questions.init();
-        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<String>) questions.arrayLists);
+        Logger.getAnonymousLogger().log(Level.FINE, (Supplier<double>) questions.arrayLists);
 
 
     }
