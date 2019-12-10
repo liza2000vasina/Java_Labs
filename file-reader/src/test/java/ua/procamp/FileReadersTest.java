@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class FileReadersTest {
 
     @Test
-    public void testReadWholeFileOnEmptyFile() {
+    public void testReadWholeFileOnEmptyFile() throws FileReaderExp {
         String fileContent = FileReaders.readWholeFile("empty.txt");
 
         assertEquals("", fileContent);
@@ -18,7 +18,7 @@ public class FileReadersTest {
     }
 
     @Test
-    public void testReadWholeFileOnFileWithEmptyLines() {
+    public void testReadWholeFileOnFileWithEmptyLines() throws FileReaderExp {
         String fileContent = FileReaders.readWholeFile("lines.txt");
 
         assertEquals("Hey!\n" +
@@ -29,7 +29,7 @@ public class FileReadersTest {
     }
 
     @Test
-    public void testReadWholeFile() {
+    public void testReadWholeFile() throws FileReaderExp {
         String fileContent = FileReaders.readWholeFile("simple.txt");
 
         assertEquals("Hello!\n" + "It's a test file.", fileContent);
